@@ -1,26 +1,26 @@
-import React, { useState, useContext, memo, Fragment } from "react";
-
-//Router
-import { Link } from "react-router-dom";
-
-//React-bootstrap
-import {
-  Accordion,
-  useAccordionButton,
-  AccordionContext,
-  Tooltip,
-  OverlayTrigger,
-} from "react-bootstrap";
-
-//Componets
-import SidebarMenu from "./sidebar-menu";
-
-function CustomToggle({ children, eventKey, onClick }) {
-  const { activeEventKey } = useContext(AccordionContext);
-
-  const decoratedOnClick = useAccordionButton(eventKey, (active) =>
-    onClick({ state: !active, eventKey: eventKey })
-  );
+  import React, { useState, useContext, memo, Fragment } from "react";
+  
+  //Router
+  import { Link } from "react-router-dom";
+  
+  //React-bootstrap
+  import {
+    Accordion,
+    useAccordionButton,
+    AccordionContext,
+    Tooltip,
+    OverlayTrigger,
+  } from "react-bootstrap";
+  
+  //Componets
+  import SidebarMenu from "./sidebar-menu";
+  
+  function CustomToggle({ children, eventKey, onClick }) {
+    const { activeEventKey } = useContext(AccordionContext);
+  
+    const decoratedOnClick = useAccordionButton(eventKey, (active) =>
+      onClick({ state: !active, eventKey: eventKey })
+    );
 
   const isCurrentEventKey = activeEventKey === eventKey;
 
@@ -60,7 +60,7 @@ const VerticalNav = memo(() => {
           <SidebarMenu
               isTag="true"
               pathname="/create-patient"
-              title="Cоздание пациента "
+              title="Добавить пациента "
           >
             <i className="ri-group-fill"></i>
           </SidebarMenu>
@@ -71,6 +71,13 @@ const VerticalNav = memo(() => {
           >
             <i className="ri-group-fill"></i>
           </SidebarMenu>
+         {/* <SidebarMenu
+              isTag="true"
+              pathname="/add-diagnosis"
+              title="Диагноз Пациента"
+          >
+            <i className="ri-group-fill"></i>
+          </SidebarMenu>*/}
 
          {/* <SidebarMenu
             isTag="true"

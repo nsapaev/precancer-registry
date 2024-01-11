@@ -4895,6 +4895,10 @@ a {
 
 .form-group {
   margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: center;
+  grid-column-gap: 20px;
 }
 
 .fc-toolbar.fc-header-toolbar {

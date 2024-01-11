@@ -75,6 +75,7 @@ import ChartJsPage from "../views/modules/charts/chartJs";
 import PrivacySetting from "../views/modules/extra-pages/privacy-setting";
 import CreatePatientComponent from "../views/createPatient/CreatePatient-component";
 import ListPatientComponent from "../views/listPatient/ListPatient-component";
+import AddDiagnosis from "../views/addDiagnosis/AddDiagnosis";
 
 
 
@@ -98,6 +99,10 @@ export const IndexRouters = [
             {
                 path:"list-of-patients",
                 element: <ListPatientComponent/>
+            },
+            {
+                path:"add-diagnosis",
+                element: <AddDiagnosis/>
             },
 
             {

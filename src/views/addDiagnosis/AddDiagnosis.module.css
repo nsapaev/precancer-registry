@@ -1,0 +1,11 @@
+.diagnosisForm1{
+    background: white;
+    padding: 20px 35px;
+    border-radius: 20px;
+}
+.diagnosisForm1__title{
+    font-size: 1.5rem;
+}
+.addDiagnosis{
+    padding-bottom: 30px;
+}
