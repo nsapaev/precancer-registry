@@ -1,7 +1,11 @@
 import React, {Fragment} from "react"
 import {Col, Row, Table} from "react-bootstrap";
+import {useSelector} from "react-redux";
 
 function ListPatientComponent() {
+
+
+    const state = useSelector(state  => state.patientList)
 
     return (
         <Fragment>
@@ -16,31 +20,38 @@ function ListPatientComponent() {
                         <div className="iq-card-body">
 
                             <div className="table-responsive">
-                                <Table id="datatable" className="" bordered striped >
+                                <Table id="datatable" className="" bordered striped>
                                     <thead>
                                     <tr>
                                         <th>Номер регистрации</th>
                                         <th>ФИО</th>
-                                        <th>Дата рождения</th>
-                                        <th>Место рождения</th>
+                                        <th>Дата, место рождения </th>
                                         <th>Пол</th>
+                                        <th>Номер телефона</th>
+                                        <th>Место рождения</th>
                                         <th>Дата сл. приёма</th>
-                                        <th>Стадия болезни</th>
-
+                                        <th>Диагноз</th>
+                                        <th>Дата регистрации</th>
                                     </tr>
+
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <td>321</td>
-                                        <td>Ниязметов Расул</td>
-                                        <td>20.06.2000</td>
-                                        <td>Ташкент</td>
-                                        <td>Мужской</td>
-                                        <td>11.03.2024</td>
-                                        <td>пигментная ксеродерма</td>
+                                    {
+                                        state.map((patient, index) => {
 
-                                    </tr>
-
+                                            return <tr key={index}>
+                                                <td>{patient.registerID}</td>
+                                                <td>{patient.fullName}</td>
+                                                <td>{patient.born}</td>
+                                                <td>{patient.sex}</td>
+                                                <td>{patient.phoneNumber}</td>
+                                                <td>{patient.addressResidence}</td>
+                                                <td>{patient.receptionDate}</td>
+                                                <td>{patient.hasDiagnosis} <button>edit</button>  </td>
+                                                <td>{patient.registrationDate}</td>
+                                            </tr>
+                                        })
+                                    }
 
                                     </tbody>
 

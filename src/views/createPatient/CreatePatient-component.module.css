@@ -8,3 +8,24 @@
 .CreatePatientComponent__form{
     padding-bottom: 30px;
 }
+.CreatePatientComponent__buttonsGroup{
+    display: flex;
+
+}
+
+.diagnosisForm1{
+    background: white;
+    padding: 20px 35px;
+    border-radius: 20px;
+}
+.diagnosisForm1__title{
+    font-size: 1.5rem;
+}
+.addDiagnosis{
+    padding-bottom: 30px;
+}
+.errMessage{
+    color: red;
+    font-family: sans-serif;
+    opacity: 0.6;
+}

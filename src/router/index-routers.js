@@ -73,8 +73,9 @@ import EChartPage from "../views/modules/charts/eChart";
 import AmCharts from "../views/modules/charts/amChart";
 import ChartJsPage from "../views/modules/charts/chartJs";
 import PrivacySetting from "../views/modules/extra-pages/privacy-setting";
-import CreatePatientComponent from "../views/createPatient/CreatePatient-component";
+
 import ListPatientComponent from "../views/listPatient/ListPatient-component";
+import {CreatePatientComponent} from "../views/createPatient/CreatePatient-component";
 import AddDiagnosis from "../views/addDiagnosis/AddDiagnosis";
 
 
