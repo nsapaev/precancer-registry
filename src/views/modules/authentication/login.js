@@ -12,46 +12,8 @@ import logo from "../../../assets/images/logo-white.png"
 import img from "../../../assets/images/login/1.png"
 import img1 from "../../../assets/images/login/2.png"
 import img2 from "../../../assets/images/login/3.png"
-import {useDispatch, useSelector} from "react-redux";
-import {setLoginAC} from "../../../store/login/loginReducer";
 
 const LoginPage = () => {
-
-    let [login, setLogin] = useState("")
-    let [password, setPassword] = useState("")
-    let dispatch = useDispatch()
-    let loginAuthData = useSelector(state => state.login)
-    let navigate =  useNavigate()
-
-    const handleSetAuthData = (e) => {
-        e.preventDefault()
-        const payload = {
-            login: login,
-            password: password
-        }
-        if (login.trim() && password.trim()) {
-            dispatch(setLoginAC(payload))
-            setLogin("")
-            setPassword("")
-            localStorage.setItem("auth", JSON.stringify(payload))
-        }
-
-
-    }
-
-
-    useEffect(() => {
-       let auth =  localStorage.getItem("auth")
-        console.log("useEffect")
-        dispatch(setLoginAC(JSON.parse(auth)))
-    }, []);
-
-
-    if (loginAuthData.login === "admin" && loginAuthData.password === "admin"){
-        console.log(true)
-        navigate('/')
-    }
-
 
         return (
             <Fragment>
@@ -88,14 +50,13 @@ const LoginPage = () => {
                             <Col md='6' className="position-relative">
                                 <div className="sign-in-from">
                                     <h1 className="mb-0">Sign in</h1>
-                                    <p>Enter your email address and password to access admin panel.</p>
+                                   {/* <p>Enter your email address and password to access admin panel.</p>*/}
                                     <Form className="mt-4">
                                         <Form.Group className='form-group'>
                                             <Form.Label htmlFor="exampleInputEmail1" className="mb-2">Email
                                                 address</Form.Label>
-                                            <Form.Control onChange={(e) => {
-                                                setLogin(e.target.value)
-                                            }} value={login} type="email" className="form-control mb-0"
+                                            <Form.Control
+                                              type="email" className="form-control mb-0"
                                                           id="exampleInputEmail1" placeholder="Enter email"/>
                                         </Form.Group>
                                         <div className="d-flex justify-content-between my-2">
@@ -103,9 +64,7 @@ const LoginPage = () => {
                                                         className='mb-0'>Password</Form.Label>
                                             <Link to="/recover-password" className="float-end">Forgot password?</Link>
                                         </div>
-                                        <Form.Control value={password} e onChange={(e) => {
-                                            setPassword(e.target.value)
-                                        }} type="password" className="form-control mb-0" id="exampleInputPassword1"
+                                        <Form.Control  type="password" className="form-control mb-0" id="exampleInputPassword1"
                                                       placeholder="Password"/>
                                         <div
                                             className="d-flex w-100 justify-content-between  align-items-center mt-3 w-100">
@@ -115,9 +74,7 @@ const LoginPage = () => {
                                                 <Form.Label className="custom-control-label" htmlFor="customCheck1">Remember
                                                     Me</Form.Label>
                                             </div>
-                                            <Button onClick={(e) => {
-                                                handleSetAuthData(e)
-                                            }} type="submit" className="btn btn-primary float-end">Sign in</Button>
+                                            <Button type="submit" className="btn btn-primary float-end">Sign in</Button>
                                         </div>
                                         {/* <div className="sign-info">
                                     <span className="dark-color d-inline-block line-height-2">Don't have an account? <Link to="/sign-up">Sign up</Link></span>

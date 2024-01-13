@@ -1,13 +1,13 @@
 import ConfirmMail from "../views/modules/authentication/confirm-mail";
 import LockScreen from "../views/modules/authentication/lock-screen";
-import LoginPage from "../views/modules/authentication/login";
 import RecoverPassword from "../views/modules/authentication/recover-password";
 import RegisterPage from "../views/modules/authentication/register";
+import LoginComponent from "../views/login/Login-component";
 
 export const AuthRouter = [
     {
         path:'/login-page',
-        element:<LoginPage/>
+        element:<LoginComponent/>
     },
     {
         path:'/sign-up',

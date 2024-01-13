@@ -2,16 +2,16 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
     login:"",
-    password:""
+    password:"",
 }
 
 const loginReducer = createSlice({
     name: 'login',
     initialState,
     reducers: {
-        setLoginAC: (state,action)=>{
-                state.login = action.payload.login
-                state.password = action.payload.password
+        setLoginAC: (state,{payload})=>{
+                state.login = payload.login
+                state.password = payload.password
         }
     }
 })

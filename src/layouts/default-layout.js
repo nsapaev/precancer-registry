@@ -28,7 +28,7 @@ const DefaultLayout = memo(() => {
 
 
     if(auth.login !== "admin" || auth.password !== "admin" ){
-        console.log("inIF")
+        console.log("check auth navigate to login page")
        return <Navigate to="/login-page"/>
     }
 

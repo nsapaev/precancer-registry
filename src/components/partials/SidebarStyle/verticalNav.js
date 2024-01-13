@@ -108,11 +108,11 @@ const VerticalNav = memo(() => {
           >
             <i className="lab la-mendeley"></i>
           </SidebarMenu>*/}
-          <li className="iq-menu-title">
+     {/*     <li className="iq-menu-title">
             <i className="ri-subtract-line"></i>
             <span>Apps</span>
           </li>
-          {/* Email menu Start */}
+           Email menu Start
           <Accordion.Item
             as="li"
             eventKey="email-menu"
@@ -151,9 +151,9 @@ const VerticalNav = memo(() => {
               </ul>
             </Accordion.Collapse>
           </Accordion.Item>
-          {/* Email menu End */}
+           Email menu End
 
-          {/* Doctors menu Start */}
+           Doctors menu Start
           <Accordion.Item
             as="li"
             eventKey="doctor-menu"
@@ -206,12 +206,12 @@ const VerticalNav = memo(() => {
               </ul>
             </Accordion.Collapse>
           </Accordion.Item>
-          {/* Doctors menu End */}
-          {/* Calendar */}
+           Doctors menu End
+           Calendar
           <SidebarMenu isTag="true" pathname="/calendar" title="Calendar">
             <i className="ri-calendar-event-fill"></i>
           </SidebarMenu>
-          {/* Chat */}
+           Chat
           <SidebarMenu isTag="true" pathname="/chat" title="Chat">
             <i className="ri-message-fill"></i>
           </SidebarMenu>
@@ -219,7 +219,7 @@ const VerticalNav = memo(() => {
             <i className="ri-subtract-line"></i>
             <span>Components</span>
           </li>
-          {/* UI-Elements menu Start */}
+           UI-Elements menu Start
           <Accordion.Item
             as="li"
             eventKey="uiElement-menu"
@@ -326,13 +326,13 @@ const VerticalNav = memo(() => {
                   pathname="/ui-list-group"
                   title="List Group"
                 ></SidebarMenu>
-                {/* <SidebarMenu
+                 <SidebarMenu
                   isTag="false"
                   staticIcon="true"
                   iconClass="ri-camera-fill"
                   pathname="/ui-media"
                   title="Media"
-                ></SidebarMenu> */}
+                ></SidebarMenu>
                 <SidebarMenu
                   isTag="false"
                   staticIcon="true"
@@ -385,10 +385,10 @@ const VerticalNav = memo(() => {
               </ul>
             </Accordion.Collapse>
           </Accordion.Item>
-          {/* UI-Elements menu End */}
-          {/* UI-Elements menu End */}
+           UI-Elements menu End
+           UI-Elements menu End
 
-          {/* Forms menu Start */}
+           Forms menu Start
           <Accordion.Item
             as="li"
             eventKey="forms-menu"
@@ -448,9 +448,9 @@ const VerticalNav = memo(() => {
               </ul>
             </Accordion.Collapse>
           </Accordion.Item>
-          {/* Forms menu End */}
+           Forms menu End
 
-          {/* Forms menu Start */}
+           Forms menu Start
           <Accordion.Item
             as="li"
             eventKey="form-wizard-menu"
@@ -496,9 +496,9 @@ const VerticalNav = memo(() => {
               </ul>
             </Accordion.Collapse>
           </Accordion.Item>
-          {/* Form-Wizard menu End */}
+           Form-Wizard menu End
 
-          {/* Table menu Start */}
+           Table menu Start
           <Accordion.Item
             as="li"
             eventKey="table-menu"
@@ -544,9 +544,9 @@ const VerticalNav = memo(() => {
               </ul>
             </Accordion.Collapse>
           </Accordion.Item>
-          {/* Table menu End */}
+           Table menu End
 
-          {/* Chart menu Start */}
+           Chart menu Start
           <Accordion.Item
             as="li"
             eventKey="charts-menu"
@@ -592,9 +592,9 @@ const VerticalNav = memo(() => {
               </ul>
             </Accordion.Collapse>
           </Accordion.Item>
-          {/* Chart menu End */}
+           Chart menu End
 
-          {/* Icons menu Start */}
+           Icons menu Start
           <Accordion.Item
             as="li"
             eventKey="icons-menu"
@@ -654,14 +654,14 @@ const VerticalNav = memo(() => {
               </ul>
             </Accordion.Collapse>
           </Accordion.Item>
-          {/* Chart menu End */}
+           Chart menu End
 
           <li className="iq-menu-title">
             <i className="ri-subtract-line"></i>
             <span>Pages</span>
           </li>
 
-          {/* Authentication menu Start */}
+           Authentication menu Start
           <Accordion.Item
             as="li"
             eventKey="authentication-menu"
@@ -723,9 +723,9 @@ const VerticalNav = memo(() => {
               </ul>
             </Accordion.Collapse>
           </Accordion.Item>
-          {/* Authentication menu End */}
+           Authentication menu End
 
-          {/* Maps menu Start */}
+           Maps menu Start
           <Accordion.Item
             as="li"
             eventKey="maps-menu"
@@ -764,9 +764,9 @@ const VerticalNav = memo(() => {
               </ul>
             </Accordion.Collapse>
           </Accordion.Item>
-          {/* Maps menu End */}
+           Maps menu End
 
-          {/* Extra pages menu Start */}
+           Extra pages menu Start
           <Accordion.Item
             as="li"
             eventKey="extra-pages-menu"
@@ -860,7 +860,7 @@ const VerticalNav = memo(() => {
                 ></SidebarMenu>
               </ul>
             </Accordion.Collapse>
-          </Accordion.Item>
+          </Accordion.Item>*/}
           {/* Extra pages menu End */}
 
           {/* Menu Level start */}

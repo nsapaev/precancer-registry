@@ -9,15 +9,15 @@ const initialState = [
         phoneNumber:"+998 (91) 123 12 23",
         addressResidence:"Urgench, 13 rayon",
         receptionDate:"10.01.2024",
-        diagnosis:{organ: "stomach",
-            complaint: "bla bla bla",
-            diagnosis: "blablabla",
-            suspicion: "сильное",
-            appointment: "asdasdasdasd",
-            dateReAppointment: "22.12.2023",
-            fillingForm: "19/12/2023"},
-        hasDiagnosis:"диагноз не задан",
-        registrationDate:"23.12.2023",
+        diagnosis:{organ: "",
+            complaint: "",
+            diagnosis: "",
+            suspicion: "",
+            appointment: "",
+            dateReAppointment: "",
+            fillingForm: ""},
+        hasDiagnosis:"",
+        registrationDate:"",
     }
 
 ]
@@ -39,6 +39,7 @@ const patientListReducer = createSlice({
             state.forEach(patient => {
                 if(+patient.registerID === +payload.id){
                     patient.diagnosis = payload.diagnosis
+                    patient.hasDiagnosis = "диагноз был изменён"
                 }
             })
         }
