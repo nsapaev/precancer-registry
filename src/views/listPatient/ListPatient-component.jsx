@@ -5,7 +5,7 @@ import {useSelector} from "react-redux";
 function ListPatientComponent() {
 
 
-    const state = useSelector(state  => state.patientList)
+    const state = useSelector(state => state.patientList)
 
     return (
         <Fragment>
@@ -25,7 +25,7 @@ function ListPatientComponent() {
                                     <tr>
                                         <th>Номер регистрации</th>
                                         <th>ФИО</th>
-                                        <th>Дата, место рождения </th>
+                                        <th>Дата, место рождения</th>
                                         <th>Пол</th>
                                         <th>Номер телефона</th>
                                         <th>Место рождения</th>
@@ -47,12 +47,13 @@ function ListPatientComponent() {
                                                 <td>{patient.phoneNumber}</td>
                                                 <td>{patient.addressResidence}</td>
                                                 <td>{patient.receptionDate}</td>
-                                                <td>{patient.hasDiagnosis} <button>edit</button>  </td>
+                                                <td>{patient.hasDiagnosis}np
+                                                    <button>edit</button>
+                                                </td>
                                                 <td>{patient.registrationDate}</td>
                                             </tr>
                                         })
                                     }
-
                                     </tbody>
 
                                 </Table>
