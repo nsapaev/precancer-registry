@@ -20,7 +20,6 @@ export function CreatePatientComponent(props) {
     const dispatch = useDispatch()
     let [showDiagnosisPage, setShowDiagnosisPage] = useState(false)
 
-
     // ? validate form
     const [validated, setValidated] = useState(false);
     const [validatedForDiagnosisForm, setValidatedForDiagnosisForm] = useState(false);

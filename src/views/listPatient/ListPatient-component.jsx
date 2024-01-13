@@ -1,11 +1,16 @@
 import React, {Fragment} from "react"
 import {Col, Row, Table} from "react-bootstrap";
 import {useSelector} from "react-redux";
+import {Navigate, useNavigate} from "react-router-dom";
+import AddDiagnosis from "../addDiagnosis/AddDiagnosis";
 
 function ListPatientComponent() {
-
-
     const state = useSelector(state => state.patientList)
+    const navigate = useNavigate()
+    const editPatientDiagnosis = (patientID) =>{
+        sessionStorage.setItem("patientID",patientID)
+        navigate('/add-diagnosis')
+    }
 
     return (
         <Fragment>
@@ -38,7 +43,6 @@ function ListPatientComponent() {
                                     <tbody>
                                     {
                                         state.map((patient, index) => {
-
                                             return <tr key={index}>
                                                 <td>{patient.registerID}</td>
                                                 <td>{patient.fullName}</td>
@@ -47,8 +51,8 @@ function ListPatientComponent() {
                                                 <td>{patient.phoneNumber}</td>
                                                 <td>{patient.addressResidence}</td>
                                                 <td>{patient.receptionDate}</td>
-                                                <td>{patient.hasDiagnosis}np
-                                                    <button>edit</button>
+                                                <td>{patient.hasDiagnosis}
+                                                    <button onClick={()=>{editPatientDiagnosis(patient.registerID)}}>edit</button>
                                                 </td>
                                                 <td>{patient.registrationDate}</td>
                                             </tr>
