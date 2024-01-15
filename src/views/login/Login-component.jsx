@@ -32,6 +32,7 @@ const LoginComponent = () => {
         if (login.trim() && password.trim()) {
             dispatch(setLoginAC(payload))
             sessionStorage.setItem("auth", JSON.stringify(payload))
+
             setLogin("")
             setPassword("")
 

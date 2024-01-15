@@ -79,7 +79,7 @@ const VerticalNav = memo(() => {
             <i className="ri-group-fill"></i>
           </SidebarMenu>*/}
 
-         {/* <SidebarMenu
+          <SidebarMenu
             isTag="true"
             pathname="/dashboard-1"
             title="Hospital Dashboard 1 "
@@ -107,8 +107,8 @@ const VerticalNav = memo(() => {
             isNew="true"
           >
             <i className="lab la-mendeley"></i>
-          </SidebarMenu>*/}
-     {/*     <li className="iq-menu-title">
+          </SidebarMenu>
+          <li className="iq-menu-title">
             <i className="ri-subtract-line"></i>
             <span>Apps</span>
           </li>
@@ -860,11 +860,11 @@ const VerticalNav = memo(() => {
                 ></SidebarMenu>
               </ul>
             </Accordion.Collapse>
-          </Accordion.Item>*/}
-          {/* Extra pages menu End */}
+          </Accordion.Item>
+           Extra pages menu End
 
-          {/* Menu Level start */}
-          {/* <Accordion.Item
+           Menu Level start
+           <Accordion.Item
             as="li"
             eventKey="menu-level"
             bsPrefix={`nav-item ${active === "extra-menu" ? "active" : ""} `}
@@ -908,7 +908,7 @@ const VerticalNav = memo(() => {
                 ></SidebarMenu>
               </ul>
             </Accordion.Collapse>
-          </Accordion.Item> */}
+          </Accordion.Item>
 
           {/* Menu Level end */}
         </Accordion>

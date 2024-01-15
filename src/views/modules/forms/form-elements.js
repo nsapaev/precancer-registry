@@ -211,7 +211,7 @@ const FormElements = () => {
                   </FormGroup>
                   <FormGroup className="form-group">
                     <FormLabel className="mb-0" htmlFor="exampleInputtime">Time Input</FormLabel>
-                    <FormControl
+                    <formcontrol
                       type="time"
                       className="form-control my-2"
                       id="exampleInputtime"

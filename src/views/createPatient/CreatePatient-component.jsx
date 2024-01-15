@@ -253,17 +253,16 @@ export function CreatePatientComponent(props) {
                                         Дата регистрации
                                     </FormLabel>
                                     <FormControl
-                                        onChange={(e) => {
+                                           onChange={(e) => {
                                             setRegistrationDate(e.target.value)
                                         }}
                                         type="datetime-local"
                                         className="form-control my-2"
                                         id="exampleInputdatetime"
-                                        defaultValue="2019-12-19T13:45:00"
+                                        defaultValue={"2019-12-19T13:45:00"}
                                         required
                                     />
                                 </FormGroup>
-
 
                                 <div className={s.CreatePatientComponent__buttonsGroup}>
                                     <FormGroup className="form-group">

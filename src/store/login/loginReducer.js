@@ -1,8 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+let auth = JSON.parse( sessionStorage.getItem("auth"))
+console.log(auth)
+
+
+if(auth){
+
+}
+
 const initialState = {
-    login:"",
-    password:"",
+    login: auth ? auth.login: "",
+    password: auth ? auth.password: "",
 }
 
 const loginReducer = createSlice({

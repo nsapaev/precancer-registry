@@ -16,7 +16,7 @@ const initialState = [
             appointment: "",
             dateReAppointment: "",
             fillingForm: ""},
-        hasDiagnosis:"",
+        hasDiagnosis:"диагноз не поставлен",
         registrationDate:"",
     }
 
