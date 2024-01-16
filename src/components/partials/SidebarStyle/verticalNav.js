@@ -59,6 +59,13 @@ const VerticalNav = memo(() => {
 
           <SidebarMenu
               isTag="true"
+              pathname="/monitoring-page"
+              title="Статистика"
+          >
+            <i className="ri-group-fill"></i>
+          </SidebarMenu>
+          <SidebarMenu
+              isTag="true"
               pathname="/create-patient"
               title="Добавить пациента "
           >

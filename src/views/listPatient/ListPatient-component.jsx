@@ -7,10 +7,14 @@ import AddDiagnosis from "../addDiagnosis/AddDiagnosis";
 function ListPatientComponent() {
     const state = useSelector(state => state.patientList)
     const navigate = useNavigate()
-    const editPatientDiagnosis = (patientID) =>{
-        sessionStorage.setItem("patientID",patientID)
+    const editPatientDiagnosis = (patientID) => {
+        sessionStorage.setItem("patientID", patientID)
         navigate('/add-diagnosis')
     }
+
+
+
+
 
     return (
         <Fragment>
@@ -48,11 +52,16 @@ function ListPatientComponent() {
                                                 <td>{patient.fullName}</td>
                                                 <td>{patient.born}</td>
                                                 <td>{patient.sex}</td>
-                                                <td>{patient.phoneNumber}</td>
+                                                <td>{patient.phoneNumber}
+                                                    <button     > send message</button>
+                                                </td>
                                                 <td>{patient.addressResidence}</td>
                                                 <td>{patient.receptionDate}</td>
                                                 <td>{patient.hasDiagnosis}
-                                                    <button onClick={()=>{editPatientDiagnosis(patient.registerID)}}>edit</button>
+                                                    <button onClick={() => {
+                                                        editPatientDiagnosis(patient.registerID)
+                                                    }}>edit
+                                                    </button>
                                                 </td>
                                                 <td>{patient.registrationDate}</td>
                                             </tr>

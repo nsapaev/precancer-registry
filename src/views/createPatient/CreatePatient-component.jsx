@@ -66,7 +66,7 @@ export function CreatePatientComponent(props) {
     let [birthCity, setBirthCity] = useState('')
     let [addressResidence, setAddressResidence] = useState("")
     let [sex, setSex] = useState("")
-    let [phoneNumber, setPhoneNumber] = useState("")
+    let [phoneNumber, setPhoneNumber] = useState(+998)
     let [registrationDate, setRegistrationDate] = useState("")
 
 
