@@ -1,9 +1,10 @@
-import React, {useState,useEffect} from "react";
+import React, {useState, useEffect, Fragment} from "react";
 import s from "./monitoring-page.module.css"
 import RequestsQuantity from "./requestsQuantity";
 import {useSelector, useDispatch} from "react-redux"
 import {getStats} from "../../store/stats/statsReducer";
-import {DateTime} from "luxon";
+import ChartDonut from "./chartDonut";
+import BarChart from "./barChart";
 
 
 export default function MonitoringPage() {
@@ -12,8 +13,8 @@ export default function MonitoringPage() {
     const patients = useSelector(state => state.stats)
     let allPatient = patients.statsForQuantity.all
     let monthPatient = {
-        month:patients.statsForQuantity.lastMonth.month,
-        quantity:patients.statsForQuantity.lastMonth.quantity,
+        month: patients.statsForQuantity.lastMonth.month,
+        quantity: patients.statsForQuantity.lastMonth.quantity,
     }
     let weakPatient = patients.statsForQuantity.lastSevenDays
     let dayPatient = patients.statsForQuantity.today
@@ -23,12 +24,11 @@ export default function MonitoringPage() {
     useEffect(() => {
         dispatch(getStats())
     }, []);
-
+    console.log(patients.statsForSex)
 
 
     return (
         <div className={s.monitoringPage}>
-
             <div className={s.section__requestQuantitys}>
                 <h3>Количество обращений</h3>
                 <div className={s.requestQuantitys}>
@@ -38,7 +38,14 @@ export default function MonitoringPage() {
                     <RequestsQuantity title={"сегодгня"} quantity={dayPatient}/>
                 </div>
             </div>
-        </div>
+            <div className={s.chartDonut}>
+                <ChartDonut data={{men:patients.statsForSex.men,
+                        women: patients.statsForSex.women,
+                        kid:patients.statsForSex.women
+                    }}/>
+                <BarChart/>
+            </div>
 
+        </div>
     )
 }

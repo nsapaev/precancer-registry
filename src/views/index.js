@@ -658,9 +658,14 @@ const Index = () => {
                   id="home-chart-03"
                   style={{ height: "280px" }}
                   className="iq-card-body"
-                ></div>
+                >
+
+                </div>
+
               </div>
+
             </div>
+
           </Col>
           <Col lg="3">
             <div className="iq-card">
