@@ -1,0 +1,26 @@
+.section__requestQuantitys{
+    padding: 10px;
+}
+.section__requestQuantitys h3{
+    background: white;
+    border-radius: 20px;
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 10px;
+}
+.requestQuantitys{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    gap:20px;
+    border-radius: 5px;
+    grid-template-rows: 1fr;
+}
+.requestsQuantity{
+    height: 100%;
+}
+.requestsQuantity__body{
+    background: white;
+    padding: 15px 10px;
+    border-radius: 10px 20px 20px 10px;
+}

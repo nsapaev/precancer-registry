@@ -1,14 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = [
+export const initialState = [
     {
-        registerID:1,
+        registerID:10,
         fullName:"Ниязметов Расул",
         born: `Tashkent  Tashkent shahar 20.06.2000`,
         sex: "Мужской",
         phoneNumber:"+998 (91) 123 12 23",
         addressResidence:"Urgench, 13 rayon",
-        receptionDate:"10.01.2024",
+        receptionDate:"2023-12-30",
         diagnosis:{organ: "",
             complaint: "",
             diagnosis: "",
@@ -18,8 +18,43 @@ const initialState = [
             fillingForm: ""},
         hasDiagnosis:"диагноз не поставлен",
         registrationDate:"",
-    }
-
+    },
+    {
+        registerID:10,
+        fullName:"Ниязметов Расул",
+        born: `Tashkent  Tashkent shahar 20.06.2000`,
+        sex: "Мужской",
+        phoneNumber:"+998 (91) 123 12 23",
+        addressResidence:"Urgench, 13 rayon",
+        receptionDate:"2024-01-12",
+        diagnosis:{organ: "",
+            complaint: "",
+            diagnosis: "",
+            suspicion: "",
+            appointment: "",
+            dateReAppointment: "",
+            fillingForm: ""},
+        hasDiagnosis:"диагноз не поставлен",
+        registrationDate:"",
+    },
+    {
+        registerID:10,
+        fullName:"Ниязметов Расул",
+        born: `Tashkent  Tashkent shahar 20.06.2000`,
+        sex: "Мужской",
+        phoneNumber:"+998 (91) 123 12 23",
+        addressResidence:"Urgench, 13 rayon",
+        receptionDate:"2024-01-18",
+        diagnosis:{organ: "",
+            complaint: "",
+            diagnosis: "",
+            suspicion: "",
+            appointment: "",
+            dateReAppointment: "",
+            fillingForm: ""},
+        hasDiagnosis:"диагноз не поставлен",
+        registrationDate:"",
+    },
 ]
 
 const patientListReducer = createSlice({

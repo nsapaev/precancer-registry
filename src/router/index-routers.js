@@ -77,7 +77,7 @@ import PrivacySetting from "../views/modules/extra-pages/privacy-setting";
 import ListPatientComponent from "../views/listPatient/ListPatient-component";
 import {CreatePatientComponent} from "../views/createPatient/CreatePatient-component";
 import AddDiagnosis from "../views/addDiagnosis/AddDiagnosis";
-import MonitoringPage from "../views/moitoring/monitoring-page";
+import MonitoringPage from "../views/monitoring/monitoring-page";
 
 
 

@@ -39,7 +39,6 @@ export function CreatePatientComponent(props) {
         setValidated(true);
 
 
-
     };
     const handleSubmitForDiagnosisForm = (event) => {
 
@@ -78,6 +77,7 @@ export function CreatePatientComponent(props) {
     let [appointment, setAppointment] = useState('')
     let [dateReAppointment, setDateReAppointment] = useState('')
     let [fillingForm, setFillingForm] = useState('')
+
 
 
     const addPatientWithoutDiagnosis = (e, bool = false, addDiagnosis = false) => {
@@ -256,7 +256,7 @@ export function CreatePatientComponent(props) {
                                            onChange={(e) => {
                                             setRegistrationDate(e.target.value)
                                         }}
-                                        type="datetime-local"
+                                        type="date"
                                         className="form-control my-2"
                                         id="exampleInputdatetime"
                                         defaultValue={"2019-12-19T13:45:00"}
@@ -299,7 +299,6 @@ export function CreatePatientComponent(props) {
 
 
             {showDiagnosisPage && <div className={s.addDiagnosis}>
-                <div></div>
                 <div className={s.diagnosisForm1}>
                     <div className={s.diagnosisForm1__title}>Диагноз Форма-1</div>
                     <Fragment>

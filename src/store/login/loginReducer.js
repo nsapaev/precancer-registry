@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 let auth = JSON.parse( sessionStorage.getItem("auth"))
-console.log(auth)
+
+
 
 
 if(auth){
